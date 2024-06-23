@@ -1,0 +1,37 @@
+<html>
+<body>
+<mat-toolbar >
+  <mat-toolbar-row>
+
+    <button mat-raised-button routerLinkActive="active"  routerLink="/add" class="actbtn" >Vissza</button>
+
+    <button mat-raised-button routerLinkActive="active" (click)=logout() class="actbtnn" >Kijelentkezés</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card class="example-card">
+  <mat-card-title>Termékek:</mat-card-title>
+
+
+<p></p>
+
+<table class="mat-elevation-z8">
+  <thead>
+  <tr>
+    <th>Termék neve</th>
+    <th>Termék kódja</th>
+    <th>Termék típusa</th>
+    <th>Termék Ára</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let item of Item">
+    <td>{{item.itemName}}</td>
+    <td>{{item.itemCode}}</td>
+    <td>{{item.itemType}}</td>
+    <td>{{item.price}}</td>
+  </tr>
+</table>
+
+</mat-card>
+</body>
+</html>
+
